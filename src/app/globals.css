@@ -23,9 +23,9 @@ body {
 }
 
 .shop-item-border {
-  border: 10px solid;
   border-image-slice: 1;
   border-width: 5px;
+  border-style: solid;
   border-style: inset;
   box-sizing: border-box;
 }
