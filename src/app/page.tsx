@@ -54,7 +54,7 @@ export default function Home() {
   const [name, setName] = useState('');
   const [name2, setName2] = useState('');
   const [balance, setBalance] = useState(0);
-  const [stage, setStage] = useState(6); // 0 is welcome, 1-N are rounds, N=last is post-game results
+  const [stage, setStage] = useState(0); // 0 is welcome, 1-N are rounds, N=last is post-game results
   const [bought, setBought] = useState<number[]>([]);
   const [transitionState, setTransitionState] = useState<Boolean>(false);
   const [isHorny, setIsHorny] = useState<boolean>(false);
