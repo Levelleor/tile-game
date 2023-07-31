@@ -40,10 +40,14 @@ const Welcome = ({ className, name, setName, name2, setName2, onComplete, useHor
   const images = ['/3-min.jpg', '/2-min.jpg', '/1-min.jpg'];
 
   useEffect(() => {
-    //preloading images
+    // preloading images
     images.forEach((url) => {
       new Image().src = url;
     });
+    // make a secret function to enable adult prompts
+    window.enableHorny = () => {
+      setShowHorny(true);
+    }
   }, []);
 
   function handleStart() {
@@ -57,10 +61,6 @@ const Welcome = ({ className, name, setName, name2, setName2, onComplete, useHor
     setTimeout(() => setImageDisplay([true, true, false]), 1500);
     setTimeout(() => setImageDisplay([true, true, true]), 2100);
     setTimeout(() => onComplete(), 2400);
-  }
-
-  window.enableHorny = () => {
-    setShowHorny(true);
   }
 
   return (
